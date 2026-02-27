@@ -10,7 +10,13 @@ const User = require('./models/User');
 const path = require('path'); 
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`\n=================================================`);
+    console.log(`🚀 STAR EMITRA SYSTEM IS ONLINE!`);
+    console.log(`🌐 Live URL: Port ${PORT}`);
+    console.log(`=================================================\n`);
+});
 
 // ============================================
 // 1. MIDDLEWARE & SECURITY SETUP
