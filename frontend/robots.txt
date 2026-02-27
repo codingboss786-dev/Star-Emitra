@@ -1,0 +1,11 @@
+User-agent: *
+# गूगल को पूरी साइट देखने की अनुमति दें
+Allow: /
+
+# इन फाइलों को छुपाएं
+Disallow: /admin.html
+Disallow: /login.html
+Disallow: /index.js
+Disallow: /package.json
+
+Sitemap: https://star-emitra.onrender.com/sitemap.xml

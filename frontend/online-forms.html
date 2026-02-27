@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forms - STAR E-mitra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header sticky">
+        <nav class="navbar container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-star logo-icon"></i>
+                    STAR E-mitra
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="emitra-services.html" class="nav-link">E-Mitra</a></li>
+                    <li><a href="banking.html" class="nav-link">Banking</a></li>
+                    <li><a href="online-forms.html" class="nav-link active">Online Forms</a></li>
+                    <li><a href="business-services.html" class="nav-link">Business</a></li>
+                    <li><a href="studio.html" class="nav-link">Studio</a></li>
+                    <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ================= NOTIFICATION MARQUEE (RED) ================= -->
+    <section class="notification-marquee">
+        <div class="notification-badge">
+            <i class="fas fa-bell"></i> URGENT UPDATES
+        </div>
+        <div class="notification-scroll">
+            <span>🔴 SSC GD Constable 2025-26: Last Date Jan 5 - Apply Today at STAR E-mitra! |</span>
+            <span>🔥 New: Rajasthan High Court Clerk 2026 Notification Out - Apply Now! |</span>
+            <span>⏰ SBI Clerk (Junior Associates) 2026: Last Date Jan 10 - Don't Wait! |</span>
+            <span>📋 India Post GDS Jan 2026 Cycle: New Vacancies Released - Check Eligibility |</span>
+            <span>🚀 RSMSSB LDC / Junior Assistant Forms Open - Visit Shop for Online Form filling |</span>
+        </div>
+    </section>
+
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section class="forms-hero">
+            <div class="forms-hero-content container">
+                <h1 class="forms-hero-title animate-on-scroll">
+                    Government Jobs & <span class="highlight">Online Applications</span>
+                </h1>
+                <p class="forms-hero-subtitle animate-on-scroll" data-delay="0.2">
+                    Don't miss the last date! We fill forms with 100% accuracy.
+                </p>
+                <p class="forms-hero-description animate-on-scroll" data-delay="0.4">
+                    Get guidance on jobs, admit cards, and results. All government applications handled professionally.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= 3-COLUMN INFO GRID ================= -->
+        <section class="section container">
+            <h2 class="section-title animate-on-scroll">
+                Your Complete <span class="highlight">Exam Guide</span>
+            </h2>
+
+            <div class="info-grid-container">
+
+
+                
+                <!-- Column 1: Latest Jobs -->
+                <div class="info-column animate-on-scroll" data-delay="0">
+                    <div class="column-header column-header-jobs">
+                        <i class="fas fa-briefcase"></i>
+                        Latest Jobs
+                    </div>
+                    <ul id="online-forms-list-jobs" class="job-list online-forms-list jobs">
+    <li class="job-item clickable" data-job="raj-cet-grad-2026" onclick="openJobDetails('raj-cet-grad-2026')">
+        <span class="blink-badge">NEW</span>
+        <a href="javascript:void(0)" class="job-link">
+            <i class="fas fa-check-circle"></i>
+            Rajasthan CET(Graduate Level)2026
+        </a>
+        <small>Deadline: 20 Feb 2026</small>
+    </li>
+
+    <li class="job-item clickable" data-job="ssc-chsl-2026" onclick="openJobDetails('ssc-chsl-2026')">
+        <span class="blink-badge">NEW</span>
+        <a href="javascript:void(0)" class="job-link">
+            <i class="fas fa-check-circle"></i>
+            SSC CHSL (10+2) Recruitment 2026
+        </a>
+        <small>Deadline: 15 Feb 2026</small>
+    </li>
+
+    <li class="job-item clickable" data-job="upsc-ias-2026" onclick="openJobDetails('upsc-ias-2026')">
+        <a href="javascript:void(0)" class="job-link">
+            <i class="fas fa-check-circle"></i>
+            UPSC Civil Services (IAS/IPS) 2026
+        </a>
+        <small>Deadline: 24 Feb 2026</small>
+    </li>
+
+    <li class="job-item clickable" data-job="raj-hc-clerk-2026" onclick="openJobDetails('raj-hc-clerk-2026')">
+        <a href="javascript:void(0)" class="job-link">
+            <i class="fas fa-check-circle"></i>
+            Rajasthan High Court Clerk 2026
+        </a>
+        <small>Deadline: 05 Feb 2026</small>
+    </li>
+
+    <li class="job-item clickable" data-job="post-office-gds-2026" onclick="openJobDetails('post-office-gds-2026')">
+        <a href="javascript:void(0)" class="job-link">
+            <i class="fas fa-check-circle"></i>
+            India Post GDS (Jan 2026 Cycle)
+        </a>
+        <small>Deadline: 21 Feb 2026</small>
+    </li>
+</ul>
+    <a href="#" class="view-all-btn" data-category="jobs">View All Jobs →</a>
+    </div>
+
+
+
+
+
+
+
+                <!--------------------- Column 2: Admit Cards ------------------------>
+<div class="info-column animate-on-scroll" data-delay="0.1">
+            <div class="column-header column-header-admit">
+                <i class="fas fa-id-card"></i> Admit Cards
+            </div>
+            <ul class="job-list online-forms-list admit">
+                <li class="job-item">
+                    <span class="blink-badge">NEW</span>
+                    <a href="https://ssc.nic.in/" class="job-link" target="_blank"><i class="fas fa-download"></i> SSC GD Constable 2026</a>
+                    <small>Released: 20 Jan 2026</small>
+                </li>
+                <li class="job-item">
+                    <span class="blink-badge">NEW</span>
+                    <a href="https://gate2026.iitg.ac.in/" class="job-link" target="_blank"><i class="fas fa-download"></i> GATE 2026 Hall Ticket</a>
+                    <small>Exam: Feb 2026</small>
+                </li>
+                <li class="job-item">
+                    <a href="https://sbi.co.in/" class="job-link" target="_blank"><i class="fas fa-download"></i> SBI Clerk Prelims</a>
+                    <small>Released: 22 Jan 2026</small>
+                </li>
+                <li class="job-item">
+                    <a href="https://jeemain.nta.nic.in/" class="job-link" target="_blank"><i class="fas fa-download"></i> JEE Main Session 1</a>
+                    <small>Exam: 24 Jan 2026</small>
+                </li>
+                <li class="job-item">
+                    <a href="https://police.rajasthan.gov.in/" class="job-link" target="_blank"><i class="fas fa-download"></i> Raj. Police Physical</a>
+                    <small>Released: 18 Jan 2026</small>
+                </li>
+            </ul>
+            <a href="#" class="view-all-btn" data-category="admit">View All Admit Cards →</a>
+        </div>
+
+        <div class="info-column animate-on-scroll" data-delay="0.2">
+            <div class="column-header column-header-results">
+                <i class="fas fa-trophy"></i> Results
+            </div>
+            <ul class="job-list online-forms-list results">
+                <li class="job-item">
+                    <span class="blink-badge">NEW</span>
+                    <a href="https://ibps.in/" class="job-link" target="_blank"><i class="fas fa-star"></i> IBPS PO XV Mains Result</a>
+                    <small>Declared: 21 Jan 2026</small>
+                </li>
+                <li class="job-item">
+                    <span class="blink-badge">NEW</span>
+                    <a href="https://ssc.nic.in/" class="job-link" target="_blank"><i class="fas fa-star"></i> SSC CGL 2025 Final</a>
+                    <small>Declared: 15 Jan 2026</small>
+                </li>
+                <li class="job-item">
+                    <a href="https://rsmssb.rajasthan.gov.in/" class="job-link" target="_blank"><i class="fas fa-star"></i> REET 2025 Final List</a>
+                    <small>Declared: 10 Jan 2026</small>
+                </li>
+                <li class="job-item">
+                    <a href="https://joinindiannavy.gov.in/" class="job-link" target="_blank"><i class="fas fa-star"></i> Navy SSR 02/2025</a>
+                    <small>Declared: 22 Jan 2026</small>
+                </li>
+                <li class="job-item">
+                    <a href="https://iimcat.ac.in/" class="job-link" target="_blank"><i class="fas fa-star"></i> IIM CAT 2025 Score</a>
+                    <small>Declared: 05 Jan 2026</small>
+                </li>
+            </ul>
+            <a href="#" class="view-all-btn" data-category="results">View All Results →</a>
+        </div>
+
+    </div>
+        </section>
+
+        <!-- ================= GENERAL APPLICATIONS SECTION ================= -->
+        <section class="general-applications-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">
+                    General <span class="highlight">Applications</span>
+                </h2>
+                <p class="section-subtitle animate-on-scroll">Quick & easy application services</p>
+
+                <div class="applications-container">
+                    <!-- Passport Application -->
+                    <div class="application-card animate-on-scroll" data-delay="0">
+                        <div class="app-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>Passport Application</h3>
+                            <p>New passport, renewal, or correction. We handle the complete process for you.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> Quick Processing</span>
+                                <span><i class="fas fa-check"></i> Document Assistance</span>
+                                <span><i class="fas fa-check"></i> Expert Guidance</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="Passport Application" data-price="1800" data-docs="ID Proof, Aadhar Card">
+                        <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- Driving License Application --> 
+                    <div class="application-card animate-on-scroll" data-delay="0.1">
+                        <div class="app-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>Driving License</h3>
+                            <p>New license or renewal. Complete documentation and online test guidance.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> Online Registration</span>
+                                <span><i class="fas fa-check"></i> Test Coaching</span>
+                                <span><i class="fas fa-check"></i> Fast Processing</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="Driving License" data-price="3200" data-docs="ID Proof, Address Proof, Photo">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- Learning Licence -->
+                    <div class="application-card animate-on-scroll" data-delay="0.15">
+                        <div class="app-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>Learning Licence</h3>
+                            <p>Apply for a learner's licence with online registration, document guidance, and test booking.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> Online Registration</span>
+                                <span><i class="fas fa-check"></i> Test Booking Guide</span>
+                                <span><i class="fas fa-check"></i> Learner ID</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="Learning Licence" data-price="3000" data-docs="ID Proof, Address, Photo">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- PAN Card Application -->
+                    <div class="application-card animate-on-scroll" data-delay="0.2">
+                        <div class="app-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>PAN Card</h3>
+                            <p>New PAN card or corrections. Complete ITR assistance available.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> New / Correction</span>
+                                <span><i class="fas fa-check"></i> ITR Filing Help</span>
+                                <span><i class="fas fa-check"></i> Same Day Processing</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="PAN Card" data-price="200" data-docs="ID Proof, Photo">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- Voter ID Application -->
+                    <div class="application-card animate-on-scroll" data-delay="0.3">
+                        <div class="app-icon">
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>Voter ID Registration</h3>
+                            <p>New voter ID or duplicate. Make your vote count in every election.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> New Registration</span>
+                                <span><i class="fas fa-check"></i> Duplicate Issue</span>
+                                <span><i class="fas fa-check"></i> Address Change</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="Voter ID Registration" data-price="100" data-docs="ID Proof, Address Proof">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- Scholarship Application -->
+                    <div class="application-card animate-on-scroll" data-delay="0.4">
+                        <div class="app-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>Scholarship Application</h3>
+                            <p>Government & private scholarships. Complete guidance for eligibility.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> Merit Based</span>
+                                <span><i class="fas fa-check"></i> Need Based</span>
+                                <span><i class="fas fa-check"></i> Expert Counseling</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="Scholarship Application" data-price="100" data-docs="Marksheet,Aadhaar Card , Janaadhar Card ID Proof">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- Revaluation / Rechecking Forms -->
+                    <div class="application-card animate-on-scroll" data-delay="0.45">
+                        <div class="app-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>Revaluation / Rechecking Forms</h3>
+                            <p>University/Board revaluation and rechecking application support and submissions.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> Re-evaluation Request</span>
+                                <span><i class="fas fa-check"></i> Board/University Forms</span>
+                                <span><i class="fas fa-check"></i> Submission Assistance</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="Revaluation Forms" data-price="100" data-docs="Marksheet, ID Proof">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- E-Signature -->
+                    <div class="application-card animate-on-scroll" data-delay="0.5">
+                        <div class="app-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>E-Signature (Digital)</h3>
+                            <p>Digital signature for online document signing. Legally valid everywhere.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> Legal Valid</span>
+                                <span><i class="fas fa-check"></i> Instant Issue</span>
+                                <span><i class="fas fa-check"></i> 24/7 Valid</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="E-Signature (Digital)" data-price="500" data-docs="ID Proof, Email">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+
+                    <!-- PF / UAN Services -->
+                    <div class="application-card animate-on-scroll" data-delay="0.55">
+                        <div class="app-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="app-content">
+                            <h3>PF / UAN Services</h3>
+                            <p>PF withdrawal, UAN KYC updates, mapping & assistance, and claim help.</p>
+                            <div class="app-features">
+                                <span><i class="fas fa-check"></i> Withdrawal Assistance</span>
+                                <span><i class="fas fa-check"></i> UAN Mapping & KYC</span>
+                                <span><i class="fas fa-check"></i> Claims Support</span>
+                            </div>
+                        </div>
+                        <a href="#" class="apply-btn btn btn-outline btn-orange" data-service="PF/UAN Services" data-price="100" data-docs="UAN, PF Account Details, ID Proof">
+                            <button class="button type1"><span class="btn-txt">Apply Now</span></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= WHY CHOOSE US SECTION ================= -->
+        <section class="why-us-forms-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll text-white">
+                    Why Students Choose <span class="highlight">STAR E-mitra?</span>
+                </h2>
+
+                <div class="why-us-grid">
+                    <div class="why-us-card animate-on-scroll" data-delay="0">
+                        <div class="why-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>100% Accurate Forms</h3>
+                        <p>Zero rejection rate. Our experts ensure every field is filled correctly.</p>
+                    </div>
+
+                    <div class="why-us-card animate-on-scroll" data-delay="0.1">
+                        <div class="why-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Quick Processing</h3>
+                        <p>Fast turnaround time. Never miss an exam deadline again.</p>
+                    </div>
+
+                    <div class="why-us-card animate-on-scroll" data-delay="0.2">
+                        <div class="why-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Data Protection</h3>
+                        <p>Your information is completely safe and secure with us.</p>
+                    </div>
+
+                    <div class="why-us-card animate-on-scroll" data-delay="0.3">
+                        <div class="why-icon">
+                            <i class="fas fa-life-ring"></i>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Dedicated guidance from education & application experts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FULL-WIDTH VISUAL SHOWCASE: ONLINE FORMS ================= -->
+        <section class="full-width-gallery animate-on-scroll" data-parallax-speed="0.05" aria-label="Image showcase online forms">
+            <div class="gallery-parallax" aria-hidden="true"></div>
+            <div class="gallery-inner">
+                <div class="section-header">
+                    <h2 class="section-title">Forms & Exams Visuals</h2>
+                    <p class="section-subtitle">Students, Exams, and Application Help</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item large" tabindex="0">
+                        <span class="glass">Exam</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHzO_Zco-awnjLO0tVYAF4SjuxBLYsC3ficA&s" alt="Student applying online">
+                        <div class="overlay"><span class="caption">Student Forms</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Registration</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCA7m0OS-IBanu6Q9Um3nURD6Ll9Z-SHKAtQ&s" alt="Exam registration">
+                        <div class="overlay"><span class="caption">Exam Registration</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Online</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRnyRI-7ntTNtXlc1gx9f3bti15G_o_b7Rvg&s" alt="Online forms">
+                        <div class="overlay"><span class="caption">Online Application</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Result</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYJc2lD-zI6k6qtxRdk4AUYoDZIjKc9TXdUg&s" alt="Exam results">
+                        <div class="overlay"><span class="caption">Results & Certificates</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Support</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTWBcra4_kxvLsfe-3FR1_Ic4DMIzzCESXrQ&s" alt="Student support">
+                        <div class="overlay"><span class="caption">Guidance & Support</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Result</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWklbnKvDgFPpuuwbJEGTkNVBEKF4023hb9A&s" alt="Exam results">
+                        <div class="overlay"><span class="caption">Results & Certificates</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Support</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxqlQCFYZDn76A1bVHa8QxtRKCYI73UENeGA&s" alt="Student support">
+                        <div class="overlay"><span class="caption">Guidance & Support</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA SECTION ================= -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title animate-on-scroll">Ready to Apply? Don't Delay!</h2>
+                <p class="cta-description animate-on-scroll" data-delay="0.2">
+                    Visit STAR E-mitra today and start your application process with expert guidance
+                </p>
+                <div class="cta-buttons animate-on-scroll" data-delay="0.4">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Contact Us Now
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Column 1: Quick Links -->
+                <div class="footer-column">
+                    <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="emitra-services.html">E-Mitra Services</a></li>
+                        <li><a href="banking.html">Banking Services</a></li>
+                    </ul>
+                    <div class="footer-socials">
+                    <a href="#" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-column">
+                    <h3><i class="fas fa-concierge-bell"></i> Services</h3>
+                    <ul class="quick-links">
+                        <li><a href="#">Government Jobs</a></li>
+                        <li><a href="#">Admit Cards</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">Passport Applications</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: More Services -->
+                <div class="footer-column">
+                    <h3><i class="fas fa-file-invoice"></i> More Services</h3>
+                    <ul class="quick-links">
+                        <li><a href="#">Driving License</a></li>
+                        <li><a href="#">PAN Card</a></li>
+                        <li><a href="#">Voter ID</a></li>
+                        <li><a href="#">E-Signature</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="footer-column">
+                    <h3><i class="fas fa-contact-card"></i> Contact Info</h3>
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bade Ganesh Mandir Warli Gali, Krishnapuri<br>Kishangarh, Ajmer Road, Rajasthan</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+917849940660">+91-7849940660</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a data-contact-key="Email" href="mailto:shekhfiroz365@gmail.com">shekhfiroz365@gmail.com</a><br>
+                        </p>
+                        <p>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 9:00 PM</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-divider"></div>
+            <div class="copyright">
+                <p>&copy; 2025 STAR E-mitra. All Rights Reserved. | Designed & Developed with <i class="fas fa-heart"></i> by Shekh Firoz</p>
+            </div>
+        </footer>
+
+    <!-- Universal Apply Modal (single instance) -->
+    <div id="universalModal" class="universal-modal" aria-hidden="true">
+        <div class="universal-modal-backdrop" data-modal-backdrop></div>
+        <div class="universal-modal-card" role="dialog" aria-labelledby="uModalTitle" aria-modal="true">
+            <button class="universal-modal-close" data-modal-close aria-label="Close">&times;</button>
+            <div class="universal-modal-body">
+                <h2 id="uModalTitle" class="u-service-title">Service Name</h2>
+                <div class="u-price-box">₹<span class="u-price">0</span><small>Only</small></div>
+                <h4>Required Documents</h4>
+                <ul class="u-docs-list"></ul>
+                <div class="u-actions">
+                    <button class="btn btn-primary" id="uProceedBtn">Proceed to WhatsApp</button>
+                    <button class="btn btn-secondary" data-modal-close>Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MEGA LIST MODAL (Level 1) ================= -->
+    <div id="megaListModal" class="mega-modal" aria-hidden="true">
+        <div class="mega-modal-backdrop" data-modal-backdrop></div>
+        <div class="mega-modal-card" role="dialog" aria-labelledby="megaListTitle" aria-modal="true">
+            <button class="mega-modal-close" data-modal-close aria-label="Close">&times;</button>
+            <div class="mega-modal-body">
+                <h2 id="megaListTitle" class="mega-title">Category</h2>
+                <div class="mega-list-container">
+                    <!-- Dynamically populated list goes here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= JOB DETAILS MODAL (Level 2) ================= -->
+    <div id="megaDetailsModal" class="mega-modal-details" aria-hidden="true">
+        <div class="mega-details-backdrop" data-details-backdrop></div>
+        <div class="mega-details-card" role="dialog" aria-labelledby="megaDetailsTitle" aria-modal="true">
+            <button class="mega-details-close" data-details-close aria-label="Close">&times;</button>
+            <div class="mega-details-body">
+                <!-- Job details injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript File -->
+    <!-- Google Form FAB + Modal: Add before script.js -->
+    <div class="floating-form" aria-hidden="false">
+        <button id="floatingFormBtn" class="floating-form-btn" aria-label="General Inquiry / Fill Form">
+            <i class="fas fa-file-alt"></i>
+            <span class="floating-form-text">Fill Form</span>
+        </button>
+    </div>
+
+    <div id="formModal" class="form-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="form-modal-backdrop" data-modal-backdrop></div>
+        <div class="form-modal-content" role="document">
+            <button class="form-modal-close" data-modal-close aria-label="Close">&times;</button>
+            <iframe width="95%" height="500px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAaL7HfdUQzRBMFA3Q1RTNk1PUlVHV1BPWkFKU0MxSi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

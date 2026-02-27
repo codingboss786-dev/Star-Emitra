@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Services Section Styling */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease; /* Animation jo Firoz bhai ko pasand hai */
+    border-top: 5px solid #007bff; /* Professional Blue color */
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Card thoda upar uthega */
+    box-shadow: 0 15px 30px rgba(0,123,255,0.2);
+    background: linear-gradient(145deg, #ffffff, #f0f7ff);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.apply-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="services-grid">
+    <div class="service-card">
+        <h3>SSC GD / CGL</h3>
+        <p>Sabhi SSC Recruitment ke online form yahan bhare jaate hain.</p>
+        <a href="#" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="service-card" style="border-top-color: #28a745;">
+        <h3>Banking Services</h3>
+        <p>Bank BC aur AePS ke dwara paise nikalne ki suvidha.</p>
+        <a href="#" class="apply-btn" style="background-color: #28a745;">Check Details</a>
+    </div>
+
+    <div class="service-card" style="border-top-color: #ffc107;">
+        <h3>E-Mitra Services</h3>
+        <p>PAN, Aadhaar, Passport aur Jan Aadhaar ki sabhi sevayein.</p>
+        <a href="#" class="apply-btn" style="background-color: #ffc107; color: #000;">More Info</a>
+    </div>
+</div>
+</body>
+</html>

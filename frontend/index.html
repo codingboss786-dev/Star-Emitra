@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1REK03CPS8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1REK03CPS8');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="CMQpuRb8JegWHhVxYZd6uyKQHP8n3Jb_fWPexLfTtWk" />
+    <title>STAR E-mitra - Your Trusted Digital Service Point</title>
+    <title>Star eMitra Kishangarh | Online Forms, PAN Card & Banking Services</title>
+
+<title>Star eMitra Kishangarh | Online Forms, PAN Card & Banking Services</title>
+<meta name="description" content="Star eMitra Kishangarh mein aapka swagat hai. Hum provide karte hain eMitra, Bank BC, CSC, Aadhaar, PAN Card, aur sabhi prakar ke online form services.">
+<meta name="keywords" content="Star eMitra, Kishangarh eMitra, Online Form filling, PAN Card center Kishangarh, CSC center, Shekh Firoz eMitra">
+<link rel="icon" type="image/jpeg" href="STAR-LOGO.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Star eMitra - Aapka Apna Digital Kendra">
+<meta property="og:description" content="Online services ke liye aaj hi visit karein.">
+<meta property="og:image" content="STAR-LOGO.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <!--
+            Google Analytics (GA4) Tracking placeholder
+            ------------------------------------------------
+            Paste your GA4 script snippet here. Example:
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);} 
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXX');
+            </script>
+                -->
+        <!-- Local SEO Meta -->
+        <meta name="description" content="STAR E-mitra - Trusted E-mitra in Kishangarh. Fast PAN, Aadhaar, Banking BC, Online Forms, and document services by Shekh Firoz.">
+        <meta name="keywords" content="E-mitra, Online Forms, Banking BC, Money Transfer, PAN Card, Kishangarh">
+        <meta name="author" content="Shekh Firoz">
+
+        <!-- JSON-LD Local Business Schema for Kishangarh -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "STAR E-mitra",
+            "description": "Trusted E-mitra & Cyber Cafe in Kishangarh. Fast PAN, Aadhaar, Banking, online forms & document services.",
+            "image": "https://staremitra.com/logo.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Main Market",
+                "addressLocality": "Kishangarh",
+                "addressRegion": "Rajasthan",
+                "addressCountry": "IN"
+            },
+            "telephone": "+91-7849940660",
+            "founder": "Shekh Firoz",
+            "keywords": "E-mitra, Online Forms, Banking BC, Money Transfer",
+            "sameAs": ["https://www.facebook.com/yourpage", "https://www.instagram.com/yourpage"]
+        }
+        </script>
+</head>
+<body>
+
+    <!-- ================= HEADER & NAVIGATION ================= -->
+    <header class="header sticky">
+        <nav class="navbar container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-star logo-icon"></i>
+                    STAR E-mitra
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="emitra-services.html" class="nav-link">E-Mitra</a></li>
+                    <li><a href="banking.html" class="nav-link">Banking</a></li>
+                    <li><a href="online-forms.html" class="nav-link">Online Forms</a></li>
+                    <li><a href="business-services.html" class="nav-link">Business</a></li>
+                    <li><a href="studio.html" class="nav-link">Studio</a></li>
+                    <li><a href="downloads.html" class="nav-link">Downloads</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <div class="nav-auth-area">
+    
+    <a href="index2.html" id="navLoginBtn" class="login-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+
+    <div id="profileSection" style="display: none;">
+        
+        <div class="profile-toggle" id="profileToggle">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <span id="nav-user-name">User</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+        <div class="profile-dropdown" id="profileDropdown">
+            <div class="dropdown-header">
+                <i class="fa-solid fa-user-astronaut drop-icon"></i>
+                <h4 id="drop-user-name" class="orbitron-text">User</h4>
+                <div id="drop-verify-status"></div>
+                <div class="user-id" id="drop-customer-id">STAR-0000</div>
+            </div>
+            
+            <div class="dropdown-body">
+                <a href="dashboard.html" class="drop-btn dashboard-btn"><i class="fa-solid fa-gauge"></i> Full Dashboard</a>
+                <button class="drop-btn logout-btn" onclick="navLogout()"><i class="fa-solid fa-power-off"></i> Logout</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1 class="hero-title animate-on-scroll">
+                    Welcome to <span class="highlight">STAR E-mitra</span> & Cyber Cafe
+                </h1>
+                <p class="hero-subtitle animate-on-scroll" data-delay="0.2">
+                    Your One-Stop Solution for Govt Services, Banking & Online Forms
+                </p>
+                <p class="hero-description animate-on-scroll" data-delay="0.4">
+                    Trusted by the community. Fast, reliable, and efficient services provided by <strong>Shekh Firoz</strong>
+                </p>
+                <a href="contact.html" class="btn btn-primary animate-on-scroll" data-delay="0.6">
+                    <i class="fas fa-phone"></i> Contact Us
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= LATEST UPDATES MARQUEE ================= -->
+        <section class="marquee-container">
+            <div class="marquee-title">
+                <i class="fas fa-bell"></i> Latest Updates
+            </div>
+            <div id="jobs-marquee" class="marquee-scroll jobs-marquee">
+                <span>📌 New PAN Card applications processed within 24 hours |</span>
+                <span>✅ PM-Kisan E-KYC is mandatory - visit us to complete it |</span>
+                <span>🔄 Jan Aadhar card corrections and updates available here |</span>
+                <span>⚡ Fast Cyber Services & Document Printing Available</span>
+            </div>
+        </section>
+
+        <!-- ================= QUICK SERVICES GRID ================= -->
+        <section class="section container">
+            <h2 class="section-title animate-on-scroll">
+                Our Top Services
+            </h2>
+            <p class="section-subtitle animate-on-scroll">Complete solutions for all your digital and government needs</p>
+            
+            <div class="services-grid">
+                <!-- Service 1: Govt Forms -->
+                <div class="service-card animate-on-scroll" data-delay="0">
+                    <div class="card-header">
+                        <div class="icon"><i class="fas fa-file-invoice"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Government Forms</h3>
+                        <p>Jan Aadhar, Caste Certificate, Domicile Certificate, Income Certificate & more official documents</p>
+                        <a href="emitra-services.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Money Transfer -->
+                <div class="service-card animate-on-scroll" data-delay="0.1">
+                    <div class="card-header">
+                        <div class="icon"><i class="fas fa-money-bill-wave"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Money Transfer</h3>
+                        <p>Fast and secure money transfer, withdrawal, deposit & Aadhaar Enabled Payment System (AePS)</p>
+                        <a href="banking.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 3: PAN Card -->
+                <div class="service-card animate-on-scroll" data-delay="0.2">
+                    <div class="card-header">
+                        <div class="icon"><i class="fas fa-credit-card"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>PAN Card Services</h3>
+                        <p>Apply for new PAN cards, update/correct details, and get instant PAN verification</p>
+                        <a href="emitra-services.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Urgent Photo -->
+                <div class="service-card animate-on-scroll" data-delay="0.3">
+                    <div class="card-header">
+                        <div class="icon"><i class="fas fa-camera"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Urgent Photo Services</h3>
+                        <p>Professional passport-size, colored, and B&W photos. Instant digital delivery available</p>
+                        <a href="studio.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Aadhar Services -->
+                <div class="service-card animate-on-scroll" data-delay="0.4">
+                    <div class="card-header">
+                        <div class="icon"><i class="fas fa-fingerprint"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Aadhar Services</h3>
+                        <p>New Aadhar enrollment, updates, corrections, and e-KYC verification in minutes</p>
+                        <a href="emitra-services.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Printing & Scanning -->
+                <div class="service-card animate-on-scroll" data-delay="0.5">
+                    <div class="card-header">
+                        <div class="icon"><i class="fas fa-print"></i></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Prints & Scanning</h3>
+                        <p>High-quality printing, color scanning, photocopy, and document binding services</p>
+                        <a href="studio.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <a href="emitra-services.html" class="btn btn-primary btn-lg animate-on-scroll" data-delay="0.6">
+                    View All Services <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= WHY CHOOSE US ================= -->
+        <section class="why-choose-us section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">
+                    Why Choose STAR E-mitra?
+                </h2>
+                
+                <div class="why-grid">
+                    <!-- Reason 1: Fast Service -->
+                    <div class="why-card animate-on-scroll" data-delay="0">
+                        <div class="why-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Lightning Fast Service</h3>
+                        <p>Get your work done quickly. Average processing time for documents is just 24 hours or less.</p>
+                    </div>
+
+                    <!-- Reason 2: Trusted Professional -->
+                    <div class="why-card animate-on-scroll" data-delay="0.1">
+                        <div class="why-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Trusted by Community</h3>
+                        <p>Run by <strong>Shekh Firoz</strong>, a certified and experienced professional with years of expertise.</p>
+                    </div>
+
+                    <!-- Reason 3: Affordable Pricing -->
+                    <div class="why-card animate-on-scroll" data-delay="0.2">
+                        <div class="why-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Affordable Pricing</h3>
+                        <p>Transparent pricing with no hidden charges. Best rates in the market for all services.</p>
+                    </div>
+
+                    <!-- Reason 4: Expert Support -->
+                    <div class="why-card animate-on-scroll" data-delay="0.3">
+                        <div class="why-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Professional guidance for every step. Our team is ready to help you 24/7.</p>
+                    </div>
+
+                    <!-- Reason 5: Secure & Verified -->
+                    <div class="why-card animate-on-scroll" data-delay="0.4">
+                        <div class="why-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure & Verified</h3>
+                        <p>All transactions are encrypted and verified. Your data is completely safe with us.</p>
+                    </div>
+
+                    <!-- Reason 6: Convenient Location -->
+                    <div class="why-card animate-on-scroll" data-delay="0.5">
+                        <div class="why-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Convenient Location</h3>
+                        <p>Easy to access location in the heart of the city. Ample parking and comfortable workspace.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA SECTION ================= -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Visit us today or call us to learn more about our services</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i> Visit Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CUSTOMER TESTIMONIALS ================= -->
+        <section class="testimonials section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">What Our Customers Say</h2>
+                <p class="section-subtitle animate-on-scroll">Fast, reliable & trusted services</p>
+                <div class="testimonials-slider animate-on-scroll" id="testimonialsSlider">
+                    <div class="testimonials-track" id="testimonialsTrack">
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Fast service and trustworthy staff. I got my PAN card verified within hours.</p>
+                            <div class="testimonial-meta"><strong>Ramesh K</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Highly recommended — quick Aadhaar e-KYC and excellent guidance from Shekh Firoz.</p>
+                            <div class="testimonial-meta"><strong>Suman L</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Reliable and friendly. The money transfer service was fast and safe.</p>
+                            <div class="testimonial-meta"><strong>Ajay P</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Great place for official forms and trusted support — they helped me with all documentation.</p>
+                            <div class="testimonial-meta"><strong>Sita R</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Fast service and trustworthy staff. I got my PAN card verified within hours.</p>
+                            <div class="testimonial-meta"><strong>Ramesh K</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Highly recommended — quick Aadhaar e-KYC and excellent guidance from Shekh Firoz.</p>
+                            <div class="testimonial-meta"><strong>Suman L</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Reliable and friendly. The money transfer service was fast and safe.</p>
+                            <div class="testimonial-meta"><strong>Ajay P</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                        <article class="testimonial-card">
+                            <p class="testimonial-text">Great place for official forms and trusted support — they helped me with all documentation.</p>
+                            <div class="testimonial-meta"><strong>Sita R</strong><span class="stars">⭐⭐⭐⭐⭐</span></div>
+                        </article>
+                    </div>
+                    <div class="testimonials-dots" id="testimonialsDots"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- WhatsApp Group Magnet Modal (markup kept; behavior moved to script.js) -->
+    <div id="waGroupModal" class="wa-modal" aria-hidden="true">
+        <div class="wa-modal-backdrop" id="waModalBackdrop"></div>
+        <div class="wa-modal-card" role="dialog" aria-labelledby="waModalTitle" aria-modal="true">
+            <button class="wa-modal-close" id="waModalClose" aria-label="Close popup">&times;</button>
+            <div class="wa-modal-body">
+                <h2 id="waModalTitle">🚑 Sarkari Naukri Updates Chahiye?</h2>
+                <p>Get daily updates for Rajasthan Police, REET, and SSC directly on WhatsApp. Join the STAR E-mitra Group now!</p>
+                <a class="wa-join-btn" href="https://chat.whatsapp.com/DLfeY5kMDvxLWAJ7NLKF9l?mode=hqrt3" target="_blank" rel="noopener">Join Group Now</a>
+                <p class="wa-modal-note">We won't spam — only important job updates. Closing this will hide it for 24 hours.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- ================= FULL-WIDTH VISUAL SHOWCASE: INDEX ================= -->
+        <section class="full-width-gallery animate-on-scroll" data-parallax-speed="0.06" aria-label="Image showcase">
+            <div class="gallery-parallax" aria-hidden="true"></div>
+            <div class="gallery-inner">
+                <div class="section-header">
+                    <h2 class="section-title">Explore</h2>
+                    <p class="section-subtitle">Community, Digital Services & Our Reach</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item large" tabindex="0">
+                        <span class="glass">Community</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Kp1TrvsoQnR8r7tMMDdbwGOp4c610kjAUg&s" alt="Community service center">
+                        <div class="overlay"><span class="caption">Community Outreach</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Services</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiydd5mQrC8y2tAdopUxmaSTNTpFjSc7vVg&s" alt="Digital services">
+                        <div class="overlay"><span class="caption">Digital Services</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Shop</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQRygaF1OIMdBMI8vEOVyTVs8BeSTC0s_oVA&s" alt="Local service shop">
+                        <div class="overlay"><span class="caption">Local Center</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Partner</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3c-d-Jk6mmitElM_9IbGHl3OpfaVizDJ7g&s" alt="People helping">
+                        <div class="overlay"><span class="caption">Trusted Team</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Impact</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXeRxxONhh7flG0Whd64QxC0RlRHymjGJnLQ&s" alt="Community impact">
+                        <div class="overlay"><span class="caption">Community Impact</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Partner</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOKlCferndC_SAfQPM-PJL7NHrZw_MfWoupQ&s" alt="People helping">
+                        <div class="overlay"><span class="caption">Trusted Team</span></div>
+                    </div>
+                    <div class="gallery-item" tabindex="0">
+                        <span class="glass">Impact</span>
+                        <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm44zDHLXVFtV8ZF-mqak4OW97gtgqLeOpTg&s" alt="Community impact">
+                        <div class="overlay"><span class="caption">Community Impact</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Standardized Footer (shared across pages) -->
+
+    <!-- Visual Showcase: Index (Technology, Office) -->
+    
+    <footer class="footer animate-on-scroll">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3><i class="fas fa-star"></i> About STAR E-mitra</h3>
+                <p>Your trusted partner for online government services, banking, and studio needs. Fast, reliable, and community-focused.</p>
+                <div class="footer-socials">
+                    <a href="#" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="emitra-services.html">E-Mitra</a></li>
+                    <li><a href="banking.html">Banking</a></li>
+                    <li><a href="online-forms.html">Online Forms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3><i class="fas fa-cogs"></i> Our Services</h3>
+                <ul class="quick-links">
+                    <li><a href="#">Government Forms</a></li>
+                    <li><a href="#">PAN & ID Services</a></li>
+                    <li><a href="#">Banking & AePS</a></li>
+                    <li><a href="#">Printing & Studio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3><i class="fas fa-contact-card"></i> Contact Info</h3>
+                <div class="contact-info">
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bade Ganesh Mandir Warli Gali, Krishnapuri<br>Kishangarh, Ajmer Road, Rajasthan</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a data-contact-key="Phone" href="tel:+917849940660">+91-7849940660</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a data-contact-key="Email" href="mailto:contact@staremitra.com">shekhfiroz365@staremitra.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Sat: 9:00 AM - 9:00 PM</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="copyright">
+            <p>&copy; 2025 STAR E-mitra. All Rights Reserved. | Designed & Developed with
+            <a href="admin.html"><i class="fas fa-heart"></i></a> by Shekh Firoz</p>
+        </div>
+    </footer>
+
+    <!-- Universal Apply Modal (single instance) -->
+    <div id="universalModal" class="universal-modal" aria-hidden="true">
+        <div class="universal-modal-backdrop" data-modal-backdrop></div>
+        <div class="universal-modal-card" role="dialog" aria-labelledby="uModalTitle" aria-modal="true">
+            <button class="universal-modal-close" data-modal-close aria-label="Close">&times;</button>
+            <div class="universal-modal-body">
+                <h2 id="uModalTitle" class="u-service-title">Service Name</h2>
+                <div class="u-price-box">₹<span class="u-price">0</span><small>Only</small></div>
+                <h4>Required Documents</h4>
+                <ul class="u-docs-list"></ul>
+                <div class="u-actions">
+                    <button class="btn btn-primary" id="uProceedBtn">Proceed to WhatsApp</button>
+                    <button class="btn btn-secondary" data-modal-close>Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Form FAB + Modal: Add before script.js -->
+    <div class="floating-form" aria-hidden="false">
+        <button id="floatingFormBtn" class="floating-form-btn" aria-label="General Inquiry / Fill Form">
+            <i class="fas fa-file-alt"></i>
+            <span class="floating-form-text">Fill Form</span>
+        </button>
+    </div>
+
+    <div id="formModal" class="form-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="form-modal-backdrop" data-modal-backdrop></div>
+        <div class="form-modal-content" role="document">
+            <button class="form-modal-close" data-modal-close aria-label="Close">&times;</button>
+            <iframe width="95%" height="500px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAaL7HfdUQzRBMFA3Q1RTNk1PUlVHV1BPWkFKU0MxSi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+    <script>
+        
+document.addEventListener('DOMContentLoaded', () => {
+    // LocalStorage se data la rahe hain
+    const userName = localStorage.getItem('userName');
+    const customerId = localStorage.getItem('customerId');
+    const isVerified = localStorage.getItem('isVerified') === 'true';
+    
+    const profileSection = document.getElementById('profileSection');
+    const loginBtn = document.getElementById('navLoginBtn');
+    
+    // 🚀 NEW PRO FEATURE: Login button par click karte hi purana page yaad rakho
+    if (loginBtn) {
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // Seedha index2 par jane se roko
+            localStorage.setItem('returnUrl', window.location.href); // Current page ko memory me save karo
+            window.location.href = 'index2.html'; // Ab login page par bhejo
+        });
+    }
+
+    // Agar user logged in hai
+    if (userName && customerId) {
+        if(profileSection) profileSection.style.display = 'inline-flex';
+        if(loginBtn) loginBtn.style.display = 'none';
+        
+        const navUserNameEl = document.getElementById('nav-user-name');
+        if(navUserNameEl) navUserNameEl.innerText = userName.split(' ')[0]; 
+        
+        const dropUserNameEl = document.getElementById('drop-user-name');
+        const dropCustomerIdEl = document.getElementById('drop-customer-id');
+        if(dropUserNameEl) dropUserNameEl.innerText = userName;
+        if(dropCustomerIdEl) dropCustomerIdEl.innerText = customerId;
+        
+        const statusDiv = document.getElementById('drop-verify-status');
+        if (statusDiv) {
+            if (isVerified) {
+                statusDiv.innerHTML = '<span class="badge verified"><i class="fa-solid fa-circle-check"></i> Verified</span>';
+            } else {
+                statusDiv.innerHTML = '<span class="badge not-verified"><i class="fa-solid fa-circle-xmark"></i> Not Verified</span>';
+            }
+        }
+    } else {
+        // Agar login nahi hai
+        if(profileSection) profileSection.style.display = 'none';
+        if(loginBtn) loginBtn.style.display = 'inline-flex';
+    }
+    
+    // Dropdown logic
+    const profileToggle = document.getElementById('profileToggle');
+    const profileDropdown = document.getElementById('profileDropdown');
+    
+    if(profileToggle && profileDropdown) {
+        profileToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            profileDropdown.classList.toggle('active');
+        });
+    }
+    
+    document.addEventListener('click', (e) => {
+        if(profileDropdown && profileDropdown.classList.contains('active') && !e.target.closest('#profileSection')) {
+            profileDropdown.classList.remove('active');
+        }
+    });
+
+    // =========================================================
+    // 🚀 VIP ANIMATED AUTO LOGIN POPUP
+    // =========================================================
+    const hasSeenPopup = sessionStorage.getItem('loginPopupShown');
+
+    if (!userName && !hasSeenPopup) {
+        setTimeout(() => {
+            if (typeof Swal !== 'undefined') {
+                Swal.fire({
+                    title: '<h2 style="font-family: \'Orbitron\', sans-serif; color: #ffffff; text-shadow: 0 0 10px #00f2ff; margin-bottom: 0;">STAR E-mitra</h2>',
+                    html: '<p style="color: #b3c5ef; font-size: 15px; margin-top: 15px;">Premium services ke liye kripya <b style="color: #00f2ff;">Login</b> karein.</p>',
+                    iconHtml: '<div class="swal-icon-pulse"><i class="fa-solid fa-user-astronaut" style="color: #00f2ff; font-size: 50px;"></i></div>',
+                    showCancelButton: true,
+                    confirmButtonText: '<i class="fa-solid fa-right-to-bracket"></i> Login Karein',
+                    cancelButtonText: 'Baad Mein',
+                    background: 'transparent', 
+                    backdrop: `rgba(0, 5, 15, 0.85)`,
+                    customClass: {
+                        popup: 'glass-popup',
+                        confirmButton: 'glass-btn-confirm',
+                        cancelButton: 'glass-btn-cancel'
+                    },
+                    allowOutsideClick: false
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // 🚀 NEW PRO FEATURE: Popup se login karte waqt bhi page yaad rakho
+                        localStorage.setItem('returnUrl', window.location.href);
+                        window.location.href = 'index2.html'; 
+                    }
+                });
+                sessionStorage.setItem('loginPopupShown', 'true');
+            }
+        }, 7000); 
+    }
+});
+
+function navLogout() {
+    const clearDataAndReload = () => {
+        localStorage.removeItem('userName');
+        localStorage.removeItem('customerId');
+        localStorage.removeItem('isVerified');
+        localStorage.removeItem('userMobile');
+        localStorage.removeItem('userAddress');
+        localStorage.removeItem('returnUrl'); // Logout par purana url bhi saaf karo
+        window.location.reload(); 
+    };
+
+    try {
+        if (typeof Swal !== 'undefined') {
+            Swal.fire({
+                title: 'Logout?',
+                text: "Kya aap sach me bahar nikalna chahte hain?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#00f2ff',
+                cancelButtonColor: '#ff4d4d',
+                confirmButtonText: 'Haan, Logout!',
+                background: '#0f0c29', color: '#fff'
+            }).then((result) => {
+                if (result.isConfirmed) clearDataAndReload();
+            });
+        } else {
+            if (confirm("Logout karna chahte hain?")) clearDataAndReload();
+        }
+    } catch (error) {
+        if (confirm("Logout karein?")) clearDataAndReload();
+    }
+}
+    </script>
+
+</body>
+</html>

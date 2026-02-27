@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Light Mode Variables */
+:root {
+    --bg-color: #c9d6ff;
+    --bg-gradient: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    --card-bg: #fff;
+    --text-primary: #000000;
+    --input-bg: #ecf1f3;
+    --primary-color: #66f9d7;
+    --overlay-gradient: linear-gradient(to right, #5c72ef, #65e2f8);
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --bg-color: #d469de;
+    --bg-gradient: linear-gradient(to right, #7f9ff7, #c98ddb);
+    --card-bg: #ce7fc8;
+    --text-primary: #000000;
+    --input-bg: #ffffff;
+    --primary-color: #66f9d7;
+    --overlay-gradient: linear-gradient(to right, #5c72ca, #d469de);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    background: var(--bg-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+/* Theme Switch Button */
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: var(--card-bg);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1001;
+    transition: 0.3s;
+}
+
+.container {
+    background-color: var(--card-bg);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    color: var(--text-primary);
+}
+
+.container h1 { color: var(--text-primary); }
+.container p { font-size: 14px; line-height: 20px; margin: 20px 0; }
+.container span { font-size: 12px; }
+.container a { color: var(--text-primary); font-size: 13px; margin: 15px 0 10px; text-decoration: none; }
+
+.container button {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+}
+
+.mobile-btn {
+    display: none;
+    background: none !important;
+    color: var(--primary-color) !important;
+    border: none !important;
+    text-decoration: underline;
+    margin-top: 20px !important;
+    padding: 0 !important;
+}
+
+.container form {
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input {
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in { left: 0; width: 50%; z-index: 2; }
+.container.active .sign-in { transform: translateX(100%); }
+.sign-up { left: 0; width: 50%; opacity: 0; z-index: 1; }
+
+.container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s, fadeInUp 0.6s ease; /* Added custom animation */
+}
+
+/* Custom Animation for transitions */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate(100%, 30px); }
+    to { opacity: 1; transform: translate(100%, 0); }
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    color: var(--text-primary);
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.active .overlay-container { transform: translateX(-100%); }
+
+.overlay {
+    background: var(--overlay-gradient);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.active .overlay { transform: translateX(50%); }
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+
+/* Google Premium Button Style */
+.google-auth-container {
+    margin: 25px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.google-premium-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 28px;
+    background: linear-gradient(to top left, #33ccff 0%, #ff99cc 100%);
+    border: 2px solid #4285F4;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(66, 133, 244, 0.2);
+    animation: float 3s ease-in-out infinite; /* Floating effect */
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* index.css mein ise update karein */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    /* background wali line hata di gayi hai kyunki JS se color aayega */
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10;
+}
+
+@keyframes particle-burst {
+    0% { transform: translate(0, 0); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)); opacity: 0; }
+}
+
+.google-premium-btn:hover {
+    box-shadow: 0 15px 30px rgba(66, 133, 244, 0.4);
+    transform: scale(1.05);
+}
+
+.overlay-left { transform: translateX(-20%); }
+.container.active .overlay-left { transform: translateX(0); }
+.overlay-right { right: 0; transform: translateX(0); }
+.container.active .overlay-right { transform: translateX(20%); }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .container { width: 100%; min-height: 550px; }
+    .overlay-container { display: none; }
+    .form-container { width: 100% !important; }
+    .sign-in, .sign-up { left: 0; transform: none !important; }
+    
+    .container.active .sign-in { opacity: 0; z-index: 1; }
+    .container.active .sign-up { opacity: 1; z-index: 5; animation: fadeInUpMobile 0.5s ease; }
+    
+    @keyframes fadeInUpMobile {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .mobile-btn { display: block; }
+}
+
+
+/* =========================================
+   COOL BUTTON BORDER ANIMATION
+   ========================================= */
+
+/* 1. Animation Define karein (Roshni ka failna) */
+@keyframes pulse-border {
+    0% {
+        /* Shuruat mein border ke paas solid rang */
+        box-shadow: 0 0 0 0px var(--primary-color);
+        opacity: 1;
+    }
+    100% {
+        /* Ant mein dur jakar gayab ho jana */
+        box-shadow: 0 0 0 15px var(--primary-color);
+        opacity: 0;
+    }
+}
+
+/* 2. Button ke liye naya style */
+/* Hum specifically sirf 'submit' buttons ko target kar rahe hain (Mobile buttons ko chhodkar) */
+.container button[type="submit"] {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    overflow: visible; /* Roshni ko bahar dikhne ke liye zaruri hai */
+}
+
+/* Hover karne par kya hoga */
+.container button[type="submit"]:hover {
+    transform: translateY(-3px); /* Button thoda upar uthega */
+    box-shadow: 0 10px 20px -10px var(--primary-color); /* Niche ek soft shadow aayegi */
+}
+
+/* 3. Pseudo-element jo actual animation karega */
+.container button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* Button ke radius se match karein */
+    z-index: -1; /* Button ke piche rahe */
+    
+    /* Animation settings */
+    opacity: 0; /* Normal state mein chhupa rahe */
+    pointer-events: none;
+}
+
+/* Hover karne par animation chalu karein */
+.container button[type="submit"]:hover::after {
+    /* Animation ka naam, samay, aur loop */
+    animation: pulse-border 1.5s infinite ease-out;
+}
+
+
+

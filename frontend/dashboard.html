@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard | STAR EMITRA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        /* --- BASE STYLES --- */
+        :root {
+            --primary-color: #00f2ff;
+            --text-color: #fff;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        /* --- CARD STYLING (Static & Compact) --- */
+        .profile-card {
+            position: relative;
+            width: 350px; /* Fixed Width */
+            background: rgba(255, 255, 255, 0.05); /* Glass Effect */
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); /* Deep Shadow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* --- CONTENT STYLING --- */
+        .profile-icon {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px var(--primary-color));
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-bottom: 15px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        .verified { background: rgba(0, 255, 0, 0.2); color: #0f0; border: 1px solid #0f0; box-shadow: 0 0 10px rgba(0,255,0,0.2); }
+        .not-verified { background: rgba(255, 0, 0, 0.2); color: #ff4d4d; border: 1px solid #ff4d4d; }
+
+        .user-id {
+            background: rgba(0, 242, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+            font-size: 14px;
+        }
+
+        /* --- FORM STYLING --- */
+        .profile-form {
+            text-align: left;
+            width: 100%;
+        }
+
+        .profile-form label {
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 5px;
+            color: rgba(255,255,255,0.8);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .profile-form i { color: var(--primary-color); margin-right: 5px; }
+
+        .profile-form input {
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+            transition: 0.3s;
+            font-size: 13px;
+        }
+
+        .profile-form input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- BUTTONS --- */
+        .btn-group { display: flex; gap: 10px; margin-top: 5px; }
+        
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 11px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        #save-btn {
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
+        }
+        #save-btn:hover { box-shadow: 0 0 25px rgba(0, 198, 255, 0.8); transform: translateY(-2px); }
+
+        .logout-btn {
+            background: rgba(255, 77, 77, 0.2) !important;
+            border: 1px solid #ff4d4d !important;
+            color: #ff4d4d;
+        }
+        .logout-btn:hover { background: #ff4d4d !important; color: #fff; box-shadow: 0 0 15px #ff4d4d; }
+
+        /* --- DECORATIONS (Scan Line Animation) --- */
+        .scan-line {
+             position: absolute;
+             top: 0; left: 0; width: 100%; height: 2px;
+             background: rgba(0, 242, 255, 0.5);
+             animation: scan 3s linear infinite;
+             opacity: 0.5;
+             pointer-events: none;
+        }
+        @keyframes scan { 0% { top: 0%; } 100% { top: 100%; } }
+
+        .card-decor {
+            position: absolute;
+            top: 15px; left: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 9px;
+            color: rgba(255,255,255,0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        
+        <div class="scan-line"></div>
+        <div class="card-decor">STAR EMITRA SYSTEM</div>
+
+        <div class="profile-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+        <h1>Welcome, <span id="user-name">User</span>!</h1>
+        <div id="verify-status"></div>
+        <div class="user-id" id="customer-id">STAR-0000</div>
+        
+        <form class="profile-form" id="update-form">
+            <label><i class="fa-solid fa-phone"></i> Mobile Number</label>
+            <input type="text" id="user-mobile" placeholder="Apna mobile number dalein">
+            
+            <label><i class="fa-solid fa-location-dot"></i> Address</label>
+            <input type="text" id="user-address" placeholder="Apna pura pata dalein">
+            
+            <div class="btn-group">
+                <button type="submit" id="save-btn">Save Changes</button>
+                <button type="button" class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userName = localStorage.getItem('userName');
+            const customerId = localStorage.getItem('customerId');
+            const isVerified = localStorage.getItem('isVerified') === 'true';
+            
+            const savedMobile = localStorage.getItem('userMobile');
+            const savedAddress = localStorage.getItem('userAddress');
+
+            if (!userName || !customerId) {
+                window.location.href = 'index.html';
+            } else {
+                document.getElementById('user-name').innerText = userName;
+                document.getElementById('customer-id').innerText = customerId;
+                
+                if (savedMobile) document.getElementById('user-mobile').value = savedMobile;
+                if (savedAddress) document.getElementById('user-address').value = savedAddress;
+
+                const statusDiv = document.getElementById('verify-status');
+                if (isVerified) {
+                    statusDiv.innerHTML = '<span class="badge verified"><i class="fa-solid fa-circle-check"></i> Verified Account</span>';
+                } else {
+                    statusDiv.innerHTML = '<span class="badge not-verified"><i class="fa-solid fa-circle-xmark"></i> Not Verified</span>';
+                }
+            }
+        });
+
+        document.getElementById('update-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const mobile = document.getElementById('user-mobile').value;
+            const address = document.getElementById('user-address').value;
+            const customerId = localStorage.getItem('customerId');
+            const saveBtn = document.getElementById('save-btn');
+
+            saveBtn.innerText = "Updating...";
+            saveBtn.disabled = true;
+
+            try {
+                const res = await fetch('/api/update-profile', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ customerId, mobile, address })
+                });
+
+                const data = await res.json();
+                
+                if (res.status === 200) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Updated!',
+                        text: 'Aapki profile kamyabi se save ho gayi.',
+                        showConfirmButton: false,
+                        timer: 2000,
+                        background: '#0f0c29', 
+                        color: '#fff',
+                        iconColor: '#00f2ff'
+                    });
+                    localStorage.setItem('userMobile', mobile);
+                    localStorage.setItem('userAddress', address);
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Galti!',
+                        text: data.message,
+                        background: '#0f0c29',
+                        color: '#fff'
+                    });
+                }
+            } catch (err) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Offline',
+                    text: 'Server se sampark nahi ho paya.',
+                    background: '#0f0c29',
+                    color: '#fff'
+                });
+            } finally {
+                saveBtn.innerText = "Save Changes";
+                saveBtn.disabled = false;
+            }
+        });
+
+        function logout() {
+            Swal.fire({
+                title: 'Logout?',
+                text: "Kya aap bahar nikalna chahte hain?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#00f2ff',
+                cancelButtonColor: '#ff4d4d',
+                confirmButtonText: 'Haan, Logout!',
+                background: '#0f0c29',
+                color: '#fff'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    localStorage.removeItem('userName');
+                    localStorage.removeItem('customerId');
+                    localStorage.removeItem('isVerified');
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>💖 premi ke ehsaas · CHANDNI & BABU · full decor</title>
+    <!-- Google Fonts: Great Vibes + Poppins + Dancing Script + Pacifico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #ffb6c1 0%, #ff99aa 30%, #ff7b89 70%, #fba0a0 100%);
+            background-attachment: fixed;
+            padding: 20px 12px 40px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        #floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .heart {
+            position: absolute;
+            bottom: -10vh;
+            font-size: clamp(1.2rem, 5vw, 2.8rem);
+            opacity: 0.7;
+            filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4));
+            animation: floatUp linear forwards;
+            will-change: transform;
+            pointer-events: none;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(-120vh) rotate(8deg); opacity: 0.2; }
+        }
+
+        .side-decor {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 120px;
+            pointer-events: none;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 0;
+            opacity: 0.7;
+        }
+        .left-decor { left: 10px; }
+        .right-decor { right: 10px; }
+        .decor-item {
+            font-size: 2.5rem;
+            animation: sway 4s infinite alternate ease-in-out;
+            filter: drop-shadow(0 0 10px #ffb6c1);
+            margin: 10px 0;
+            transform-origin: center;
+        }
+        .decor-item:nth-child(even) { animation-duration: 5s; animation-name: swayEven; }
+        .decor-item:nth-child(odd) { animation-duration: 3.5s; }
+        @keyframes sway {
+            from { transform: rotate(-10deg) scale(0.9); }
+            to { transform: rotate(10deg) scale(1.1); }
+        }
+        @keyframes swayEven {
+            from { transform: rotate(5deg) scale(1); }
+            to { transform: rotate(-5deg) scale(1.2); }
+        }
+        @media (max-width: 900px) { .side-decor { width: 60px; } .decor-item { font-size: 1.8rem; } }
+        @media (max-width: 700px) { .side-decor { display: none; } }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50px;
+            padding: 24px 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        .glass-header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.2rem;
+            color: #4a0e2e;
+            text-shadow: 2px 2px 0 rgba(255,255,240,0.8);
+            margin-bottom: 8px;
+        }
+        .glass-header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #2d0a1a;
+        }
+        .personal-touch {
+            margin-top: 12px;
+            font-size: 1.5rem;
+            background: rgba(255,240,245,0.4);
+            backdrop-filter: blur(4px);
+            border-radius: 40px;
+            padding: 10px 18px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.7);
+            color: #3b1122;
+        }
+        .personal-touch span {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #b3416d;
+            text-shadow: 0 0 10px #ffc0cb;
+        }
+
+        .premi-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0 20px;
+        }
+        .premi-card {
+            background: rgba(255, 240, 245, 0.3);
+            backdrop-filter: blur(16px);
+            border: 2px solid rgba(255,255,255,0.7);
+            border-radius: 100px 100px 40px 40px;
+            padding: 20px 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 30px 40px rgba(255, 105, 180, 0.3);
+        }
+        .premi-card .big-emoji {
+            font-size: 5rem;
+            filter: drop-shadow(0 0 15px gold);
+            animation: softGlow 3s infinite alternate;
+        }
+        @keyframes softGlow {
+            from { filter: drop-shadow(0 0 5px #ffb6c1); }
+            to { filter: drop-shadow(0 0 20px #ff69b4, 0 0 30px gold); }
+        }
+        .premi-card .couple-names {
+            font-size: 2.2rem;
+            font-family: 'Dancing Script', cursive;
+            font-weight: 800;
+            color: #520e2a;
+            text-shadow: 0 0 20px white;
+            margin: 10px 0 5px;
+        }
+        .premi-card .tagline {
+            font-size: 1.2rem;
+            background: rgba(255,255,240,0.5);
+            padding: 8px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(4px);
+            color: #2c0d1b;
+            font-weight: 600;
+        }
+        .love-quote {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 18px 25px;
+            border: 1.5px solid white;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #3a0f21;
+            max-width: 280px;
+            text-align: center;
+        }
+        .love-quote span {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.9rem;
+            display: block;
+            color: #a1355b;
+        }
+
+        .special-design {
+            margin: 20px 0 30px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .love-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            text-shadow: 3px 3px 0 #ff4d6d, 6px 6px 0 rgba(255,255,255,0.6), 8px 8px 0 #ffb3c6;
+            color: #ff1a4c;
+            animation: glowPulse 2s infinite;
+            pointer-events: none;
+        }
+        @keyframes glowPulse {
+            0% { filter: drop-shadow(0 0 5px #ffb6c1); }
+            50% { filter: drop-shadow(0 0 20px #ff4d6d, 0 0 30px gold); }
+            100% { filter: drop-shadow(0 0 5px #ffb6c1); }
+        }
+
+        .song-player {
+            background: rgba(255,215,235,0.35);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.7);
+            border-radius: 80px;
+            padding: 16px 25px;
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 15px 25px rgba(255,105,180,0.4);
+        }
+        .song-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .song-info .music-icon {
+            font-size: 2.8rem;
+            animation: spinSlow 6s infinite linear;
+        }
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .song-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #3c1022;
+        }
+        .song-text .song-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            display: block;
+            color: #a12b55;
+        }
+        .play-btn {
+            background: rgba(255,240,245,0.8);
+            border: none;
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #4d132a;
+            backdrop-filter: blur(10px);
+            border: 1.5px solid white;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 5px 15px rgba(255,20,147,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .play-btn:hover {
+            background: rgba(255,255,255,0.95);
+            transform: scale(1.05);
+        }
+
+        .gift-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .gift-btn {
+            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1.5px solid rgba(255,255,255,0.6);
+            border-radius: 30px;
+            padding: 20px 8px;
+            color: #2f0f1f;
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: center;
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            isolation: isolate;
+            animation: danceBox 3s infinite ease-in-out;
+            transform-origin: center;
+            border-width: 2px;
+        }
+        .gift-btn:nth-child(1) { animation-duration: 2.8s; background: rgba(255,200,210,0.3); }
+        .gift-btn:nth-child(2) { animation-duration: 3.4s; animation-name: danceBoxSlow; background: rgba(220,210,255,0.3); }
+        .gift-btn:nth-child(3) { animation-duration: 3.0s; background: rgba(255,230,180,0.3); }
+        .gift-btn:nth-child(4) { animation-duration: 3.6s; animation-name: danceBoxSlow; background: rgba(210,240,255,0.3); }
+        .gift-btn:nth-child(5) { animation-duration: 2.5s; background: rgba(255,200,240,0.3); }
+        .gift-btn:nth-child(6) { animation-duration: 3.2s; background: rgba(220,255,220,0.3); }
+        .gift-btn:nth-child(7) { animation-duration: 3.8s; animation-name: danceBoxSlow; background: rgba(255,210,230,0.3); }
+        .btn-special { 
+            animation: pulseHeart 1.8s infinite ease-in-out, danceBox 4s infinite !important; 
+            background: rgba(255, 180, 200, 0.4) !important;
+            border: 3px solid #ff8da1 !important;
+        }
+        @keyframes danceBox {
+            0% { transform: translateY(0px) rotate(0deg) scale(1); }
+            25% { transform: translateY(-6px) rotate(0.8deg) scale(1.02); }
+            50% { transform: translateY(4px) rotate(-0.9deg) scale(0.98); }
+            75% { transform: translateY(-3px) rotate(1deg) scale(1.01); }
+            100% { transform: translateY(0px) rotate(0deg) scale(1); }
+        }
+        @keyframes danceBoxSlow {
+            0% { transform: translateY(0px) rotate(0deg); }
+            30% { transform: translateY(-5px) rotate(-0.6deg); }
+            60% { transform: translateY(5px) rotate(0.8deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .gift-btn:hover {
+            animation-duration: 0.6s !important;
+            background: rgba(255, 240, 245, 0.6) !important;
+            border-color: #ffa5b9;
+            box-shadow: 0 0 30px #ffb3d9;
+        }
+        .btn-special {
+            grid-column: span 2;
+            font-weight: 700;
+            font-size: 1.3rem;
+            padding: 22px 12px;
+        }
+        @keyframes pulseHeart {
+            0% { transform: scale(1); background: rgba(255, 200, 220, 0.4); }
+            50% { transform: scale(1.03); background: rgba(255, 150, 180, 0.5); border-color: #ff4d6d; box-shadow: 0 0 20px #ffb3c6; }
+            100% { transform: scale(1); background: rgba(255, 200, 220, 0.4); }
+        }
+
+        .star-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+            border-radius: 30px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, visibility 0.2s;
+        }
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-card {
+            max-width: 480px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255,255,255,0.7);
+            border-radius: 48px;
+            padding: 30px 24px 35px;
+            box-shadow: 0 30px 40px -10px rgba(128,0,64,0.3);
+            text-align: center;
+            position: relative;
+            transform: scale(0.3) translateY(-30px);
+            opacity: 0;
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s;
+        }
+        .modal-overlay.show .modal-card {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background: rgba(255,255,240,0.5);
+            border: 1.5px solid white;
+            backdrop-filter: blur(5px);
+            font-size: 28px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #3e0e23;
+            transition: 0.2s;
+        }
+        .close-btn:hover {
+            background: rgba(255,255,255,0.8);
+            transform: rotate(90deg);
+        }
+        .modal-emoji {
+            font-size: 6rem;
+            line-height: 1.2;
+            margin: 10px 0 5px;
+            display: inline-block;
+            animation: emojiPop 2s infinite alternate ease-in-out;
+            filter: drop-shadow(0 0 10px #ffb3cb);
+        }
+        @keyframes emojiPop {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.1) rotate(4deg); }
+        }
+        .modal-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #4f0932;
+            text-shadow: 0 0 8px #ffd9e6, 0 0 18px gold;
+            margin: 8px 0 10px;
+        }
+        .shayari {
+            font-size: 1.15rem;
+            background: rgba(255,255,220,0.25);
+            padding: 22px 16px;
+            border-radius: 40px;
+            border: 1px solid rgba(255,255,255,0.6);
+            backdrop-filter: blur(4px);
+            color: #1f0b16;
+            font-weight: 400;
+            line-height: 1.8;
+            text-shadow: 0 0 5px #fff3f7, 0 0 10px #ffb6c1;
+            margin-top: 12px;
+            white-space: pre-line;
+        }
+        @media (max-width: 480px) {
+            .glass-header h1 { font-size: 2.6rem; }
+            .premi-card .couple-names { font-size: 1.8rem; }
+            .love-quote { font-size: 1rem; }
+            .song-player { flex-direction: column; }
+            .play-btn { width: 100%; justify-content: center; }
+        }
+
+        /* ---- NAYA CONFETTI (simple divs) ---- */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        .confetti-particle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ff4d6d;
+            opacity: 0.9;
+            top: -20px;
+            border-radius: 2px;
+            box-shadow: 0 0 8px currentColor;
+            animation: fall linear forwards;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0.2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="floating-hearts"></div>
+
+    <div class="side-decor left-decor">
+        <div class="decor-item">🌹</div><div class="decor-item">💖</div><div class="decor-item">🌺</div><div class="decor-item">🌸</div><div class="decor-item">💞</div><div class="decor-item">🌷</div><div class="decor-item">💘</div><div class="decor-item">🌼</div><div class="decor-item">💕</div><div class="decor-item">🌻</div>
+    </div>
+    <div class="side-decor right-decor">
+        <div class="decor-item">💗</div><div class="decor-item">🌹</div><div class="decor-item">💓</div><div class="decor-item">🌺</div><div class="decor-item">💖</div><div class="decor-item">🌸</div><div class="decor-item">💝</div><div class="decor-item">🌷</div><div class="decor-item">💟</div><div class="decor-item">🌼</div>
+    </div>
+
+    <div class="container">
+        <div class="glass-header">
+            <h1>My Love Timeline</h1>
+            <p>Tap a gift to open... 🎁</p>
+            <div class="personal-touch">
+                💞 <span>CHANDNI</span> → <span>BABU</span> 💞
+            </div>
+        </div>
+
+        <div class="premi-section">
+            <div class="premi-card">
+                <div class="big-emoji">🥰💑🌹</div>
+                <div class="couple-names">CHANDNI ❤️ BABU</div>
+                <div class="tagline">premi forever</div>
+            </div>
+            <div class="love-quote">
+                <span>“Dil Ki Baat”</span>
+                Tumse Milke Lagta Hai,<br>Jaise Duniya Mil Gayi Ho.
+            </div>
+        </div>
+
+        <div class="special-design">
+            <div class="love-overlay">I ❤️ U</div>
+        </div>
+
+        <div class="song-player">
+            <div class="song-info">
+                <div class="music-icon">🎶💿</div>
+                <div class="song-text">
+                    <span class="song-name">Tum Hi Ho</span>
+                    Aarzoo.. Tum Hi Ho
+                </div>
+            </div>
+            <button id="playSongBtn" class="play-btn">
+                <span>▶</span> Pyaar Ka Gaana Bajao
+            </button>
+        </div>
+
+        <div class="gift-grid">
+            <button class="gift-btn" data-day="rose">🌹 7 Feb · Rose Day</button>
+            <button class="gift-btn" data-day="propose">💍 8 Feb · Propose Day</button>
+            <button class="gift-btn" data-day="chocolate">🍫 9 Feb · Chocolate Day</button>
+            <button class="gift-btn" data-day="teddy">🧸 10 Feb · Teddy Day</button>
+            <button class="gift-btn" data-day="promise">🤝 11 Feb · Promise Day</button>
+            <button class="gift-btn" data-day="hug">🤗 12 Feb · Hug Day</button>
+            <button class="gift-btn" data-day="kiss">💋 13 Feb · Kiss Day</button>
+            <button class="gift-btn btn-special" data-day="valentine">❤️ 14 Feb · Valentine's Day</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="giftModal">
+        <div class="modal-card">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <div class="modal-emoji" id="modalEmoji">🌹</div>
+            <div class="modal-title" id="modalTitle">Happy Rose Day!</div>
+            <div class="shayari" id="modalShayari">Gulab to bas ek bahaana hai...</div>
+        </div>
+    </div>
+
+    <!-- YAHAN NAYA CONFETTI AAEGA (container) -->
+    <div id="confettiContainer" class="confetti-container" style="display: none;"></div>
+
+    <script>
+        (function() {
+            // floating hearts background
+            const heartsContainer = document.getElementById('floating-hearts');
+            const colors = ['#ff4d6d', '#f9a8d4', '#c084fc', '#fde047', '#6ee7b7', '#60a5fa', '#f472b6', '#fb7185', '#e879f9', '#fbbf24'];
+            
+            function createHeart() {
+                const heartEl = document.createElement('div');
+                heartEl.classList.add('heart');
+                heartEl.style.color = colors[Math.floor(Math.random() * colors.length)];
+                heartEl.style.left = Math.random() * 100 + '%';
+                heartEl.style.fontSize = (1.2 + Math.random() * 2.2) + 'rem';
+                const duration = 5 + Math.random() * 12;
+                heartEl.style.animation = `floatUp ${duration}s linear forwards`;
+                const heartIcons = ['❤️', '🧡', '💛', '💚', '💙', '💜', '🩷', '💖', '💗', '💓', '💞', '💕'];
+                heartEl.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heartsContainer.appendChild(heartEl);
+                setTimeout(() => { if (heartEl.parentNode) heartEl.remove(); }, duration * 1000);
+            }
+            setInterval(createHeart, 500);
+            for (let i = 0; i < 10; i++) setTimeout(createHeart, i * 100);
+
+            // love song player
+            const playBtn = document.getElementById('playSongBtn');
+            let audioCtx = null;
+            let isPlaying = false;
+            let gainNode = null;
+
+            playBtn.addEventListener('click', () => {
+                if (!isPlaying) {
+                    try {
+                        if (!audioCtx) {
+                            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                            gainNode = audioCtx.createGain();
+                            gainNode.gain.value = 0.15;
+                            gainNode.connect(audioCtx.destination);
+                        }
+                        const now = audioCtx.currentTime;
+                        
+                        const osc1 = audioCtx.createOscillator();
+                        osc1.type = 'sine';
+                        osc1.frequency.value = 293.66;
+                        osc1.connect(gainNode);
+                        osc1.start(now);
+                        osc1.stop(now + 240);
+
+                        const osc2 = audioCtx.createOscillator();
+                        osc2.type = 'triangle';
+                        osc2.frequency.value = 369.99;
+                        osc2.connect(gainNode);
+                        osc2.start(now + 0.2);
+                        osc2.stop(now + 240);
+
+                        const osc3 = audioCtx.createOscillator();
+                        osc3.type = 'sine';
+                        osc3.frequency.value = 440.00;
+                        osc3.connect(gainNode);
+                        osc3.start(now + 0.5);
+                        osc3.stop(now + 240);
+
+                        isPlaying = true;
+                        playBtn.innerHTML = '<span>⏸️</span> Gaana Baj Raha Hai 💞';
+                    } catch(e) {
+                        alert('Kripya page par tap karein aur phir koshish karein');
+                    }
+                } else {
+                    if (audioCtx) {
+                        audioCtx.close().then(() => {
+                            audioCtx = null;
+                            isPlaying = false;
+                            playBtn.innerHTML = '<span>▶</span> Pyaar Ka Gaana Bajao';
+                        });
+                    }
+                }
+            });
+
+            // hover star effect (optional, same rahega)
+            const buttons = document.querySelectorAll('.gift-btn');
+            function attachStarEffect(btn) {
+                let canvas = document.createElement('canvas');
+                canvas.classList.add('star-canvas');
+                btn.appendChild(canvas);
+                let ctx = canvas.getContext('2d');
+                let width, height;
+                let stars = [];
+                let animFrame = null;
+                let isHovering = false;
+
+                function resize() {
+                    const rect = btn.getBoundingClientRect();
+                    width = rect.width;
+                    height = rect.height;
+                    canvas.width = width;
+                    canvas.height = height;
+                }
+
+                function createStar() {
+                    return {
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: 3 + Math.random() * 6,
+                        speedX: (Math.random() - 0.5) * 0.8,
+                        speedY: (Math.random() - 0.5) * 0.8,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        life: 0.8 + Math.random() * 0.3,
+                        angle: Math.random() * Math.PI * 2
+                    };
+                }
+
+                function drawStars() {
+                    if (!isHovering) {
+                        if (animFrame) { cancelAnimationFrame(animFrame); animFrame = null; }
+                        ctx.clearRect(0, 0, width, height);
+                        return;
+                    }
+                    ctx.clearRect(0, 0, width, height);
+                    
+                    if (stars.length < 18 && Math.random() < 0.3) stars.push(createStar());
+                    
+                    for (let i = stars.length - 1; i >= 0; i--) {
+                        let s = stars[i];
+                        s.x += s.speedX;
+                        s.y += s.speedY;
+                        s.life -= 0.002;
+                        
+                        if (s.x < -10 || s.x > width + 10 || s.y < -10 || s.y > height + 10 || s.life <= 0.05) {
+                            stars.splice(i, 1);
+                            continue;
+                        }
+                        
+                        ctx.save();
+                        ctx.translate(s.x, s.y);
+                        ctx.rotate(s.angle);
+                        ctx.shadowColor = s.color;
+                        ctx.shadowBlur = 12;
+                        ctx.beginPath();
+                        for (let j = 0; j < 4; j++) {
+                            let rad = (j * Math.PI / 2) + s.angle;
+                            let x1 = Math.cos(rad) * s.radius * 0.6;
+                            let y1 = Math.sin(rad) * s.radius * 0.6;
+                            let x2 = Math.cos(rad + 0.8) * s.radius * 1.2;
+                            let y2 = Math.sin(rad + 0.8) * s.radius * 1.2;
+                            ctx.moveTo(x1, y1);
+                            ctx.lineTo(x2, y2);
+                            ctx.lineTo(-x1, -y1);
+                            ctx.lineTo(-x2, -y2);
+                        }
+                        ctx.closePath();
+                        ctx.fillStyle = s.color;
+                        ctx.globalAlpha = s.life * 0.8;
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                    
+                    animFrame = requestAnimationFrame(drawStars);
+                }
+
+                btn.addEventListener('mouseenter', () => {
+                    resize();
+                    isHovering = true;
+                    stars = [];
+                    for (let i = 0; i < 10; i++) stars.push(createStar());
+                    if (animFrame) cancelAnimationFrame(animFrame);
+                    drawStars();
+                });
+
+                btn.addEventListener('mouseleave', () => { isHovering = false; });
+                window.addEventListener('resize', () => { if (isHovering) resize(); });
+            }
+            buttons.forEach(btn => attachStarEffect(btn));
+
+            // modal with shayari
+            const modalOverlay = document.getElementById('giftModal');
+            const closeBtn = document.getElementById('closeModalBtn');
+            const modalEmoji = document.getElementById('modalEmoji');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalShayari = document.getElementById('modalShayari');
+
+            const dayData = {
+                rose: { emoji: '🌹🌹', title: '🌹 7 Feb · Rose Day', shayari: `Gulab to bas ek bahaana hai,\nAsal maksad to tumhein yeh batana hai.\nKi kudrat ne phoolon mein jo bhi khoobsurti bakhshi hai,\nWoh sab tumhaare chehre ki ek muskurahat mein simat aayi hai.\n\nHappy Rose Day!` },
+                propose: { emoji: '💍✨', title: '💍 8 Feb · Propose Day', shayari: `Mere dil ki kitaab mein, har panna tumhaara hai,\nMeri har kahaani ka, har qissa tumhaara hai.\nMain tumhein sirf apna banana nahi chahta,\nMain chahta hoon ki mera har kal, ab se tumhaara ho.\n\nHappy Propose Day!` },
+                chocolate: { emoji: '🍫🍬', title: '🍫 9 Feb · Chocolate Day', shayari: `Mithaas to chocolate mein bhi hai, aur shahad mein bhi,\nMagar jo sukoon teri baaton mein hai, woh kahin aur nahi.\nTum zindagi mein aayi ho to ab har lamha meetha lagta hai,\nVarna ye zindagi to badi pheeki si thi.\n\nHappy Chocolate Day!` },
+                teddy: { emoji: '🧸🎀', title: '🧸 10 Feb · Teddy Day', shayari: `Dil karta hai tumhein teddy bear ki tarah paas rakh loon,\nJab bhi dil ghabraye, tumhein seene se laga loon.\nMagar tum door ho to ye teddy mera paigham laaya hai,\nSamajh lena ki maine tumhein hi gale lagaya hai.\n\nHappy Teddy Day!` },
+                promise: { emoji: '🤝🌸', title: '🤝 11 Feb · Promise Day', shayari: `Main ye waada nahi karta ki hamaari raahon mein kabhi andhera nahi hoga,\nPar ye waada karta hoon ki us andhere mein bhi haath mera hi hoga.\nKhushiyan baante ya na baante, gham aadha-aadha kar lenge,\nHum har haal mein ye rishta nibha lenge.\n\nHappy Promise Day!` },
+                hug: { emoji: '🤗🫂', title: '🤗 12 Feb · Hug Day', shayari: `Suna hai duniya mein kai khoobsurat jagahain hain ghoomne ko,\nMagar jo sukoon teri baahon ke ghere mein hai, woh jannat mein bhi nahi.\nBas ek baar gale lag jao,\nTaaki meri dhadkanon ko apna ghar mil sake.\n\nHappy Hug Day!` },
+                kiss: { emoji: '💋🌹', title: '💋 13 Feb · Kiss Day', shayari: `Honthon se jo kaha nahi jaata, woh aaj aankhon se keh do,\nFaasle mita do aur dil ke jazbaat behne do.\nTumhaare maathe ko choomkar bas itna jataana hai,\nKi tumhaari fikr mujhe khud se zyada hai.\n\nHappy Kiss Day!` },
+                valentine: { emoji: '❤️🎉', title: '❤️ 14 Feb · Valentine’s Day', shayari: `Taareekhein to calendar mein badalti rahengi,\nMagar mere dil mein tumhaari jagah kabhi nahi badlegi.\nTum mera aaj ho, mera kal ho aur meri har dua ho,\nSirf ek din ke liye nahi, tum taumr meri 'Valentine' ho.\n\nHappy Valentine's Day My Life!` }
+            };
+
+            function openModal(dayKey) {
+                const data = dayData[dayKey] || dayData.rose;
+                modalEmoji.innerText = data.emoji;
+                modalTitle.innerText = data.title;
+                modalShayari.innerText = data.shayari;
+                modalOverlay.classList.add('show');
+            }
+            function closeModal() { modalOverlay.classList.remove('show'); }
+
+            // ========== SIMPLE DIV CONFETTI ==========
+            const confettiContainer = document.getElementById('confettiContainer');
+
+            function triggerSimpleConfetti() {
+                // container dikhao
+                confettiContainer.style.display = 'block';
+
+                // 120 particles banao
+                for (let i = 0; i < 120; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('confetti-particle');
+                    
+                    // random left position
+                    particle.style.left = Math.random() * 100 + '%';
+                    
+                    // random size (8px to 18px)
+                    const size = 8 + Math.random() * 12;
+                    particle.style.width = size + 'px';
+                    particle.style.height = size + 'px';
+                    
+                    // random background color from colors array
+                    particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    // random animation duration (2s to 5s)
+                    const duration = 2 + Math.random() * 3;
+                    particle.style.animation = `fall ${duration}s linear forwards`;
+                    
+                    // random rotation start
+                    particle.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    
+                    // slight delay so they don't all fall together
+                    particle.style.animationDelay = (Math.random() * 0.2) + 's';
+                    
+                    confettiContainer.appendChild(particle);
+                    
+                    // remove after animation
+                    setTimeout(() => {
+                        if (particle.parentNode) particle.remove();
+                    }, duration * 1000 + 200);
+                }
+                
+                // 2.5 sec baad container hide kar do (jab saare gayab ho jayenge)
+                setTimeout(() => {
+                    confettiContainer.style.display = 'none';
+                }, 3500);
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const day = btn.dataset.day;
+                    openModal(day);
+                    if (day === 'valentine') {
+                        // modal ke baad thoda der se confetti aaye
+                        setTimeout(() => {
+                            triggerSimpleConfetti();
+                        }, 120);
+                    }
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
+
+        })();
+    </script>
+</body>
+</html>
